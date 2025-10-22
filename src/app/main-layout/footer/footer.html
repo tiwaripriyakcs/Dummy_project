@@ -1,0 +1,27 @@
+    <footer class="bg-gradient-to-b from-gray-900 to-black text-white">
+      <!-- Footer Bottom Section -->
+      <div class="border-t border-gray-800">
+        <div class="container mx-auto px-4 py-8">
+          <!-- Logo -->
+          <div class="flex justify-center mb-6">
+            <div class="text-2xl font-bold tracking-wider">
+              India video
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-6 text-sm md:text-base">
+            <a *ngFor="let link of footerLinks"
+               [href]="link.url"
+               class="text-blue-400 hover:text-blue-300 transition-colors duration-200">
+              {{ link.text }}
+            </a>
+          </div>
+
+          <!-- Copyright -->
+          <div class="text-center text-gray-400 text-sm">
+            © 1996-{{ currentYear }}, Amazon.com, Inc. or its affiliates
+          </div>
+        </div>
+      </div>
+    </footer>

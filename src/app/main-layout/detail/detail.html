@@ -1,0 +1,145 @@
+<div class="min-h-screen bg-black text-white">
+    <!-- Main Content with Background Image -->
+    <div *ngIf="id !== 'rentData'" class="min-h-screen relative" [style.backgroundImage]="'url(' + backgroundImage + ')'"
+        style="background-size: cover; background-position: center right;">
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/40"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 px-8 md:px-16 lg:px-24 py-20 flex items-center min-h-screen">
+            <div class=" space-y-6">
+                <!-- Prime Logo -->
+                <!-- <div class="flex items-center space-x-2">
+              <span class="text-blue-400 text-2xl font-bold">prime</span>
+              <div class="w-8 h-1 bg-blue-400 rounded"></div>
+            </div> -->
+
+                <!-- Title -->
+                <div class="max-w-2xl">
+                    <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+                        {{ movieTitle }}
+                    </h1>
+                </div>
+
+                <!-- Rank Badge -->
+                <div
+                    class="inline-flex items-center space-x-2 bg-green-600 bg-opacity-20 border border-green-500 px-3 py-1.5 rounded">
+                    <span class="text-green-400 text-sm font-bold">{{ rankBadge }}</span>
+                </div>
+
+                <!-- Description -->
+
+                <div class="max-w-2xl">
+                    <p class="text-gray-200 text-base md:text-lg leading-relaxed">
+                        {{ description }}
+                    </p>
+                </div>
+
+                <!-- Movie Info Tags -->
+                <div class="flex flex-wrap items-center gap-3 text-sm">
+                    <span class="bg-white text-black px-3 py-1 rounded font-semibold text-xs">NEW MOVIE</span>
+                    <span class="text-gray-200">{{ duration }}</span>
+                    <span class="text-gray-200">{{ year }}</span>
+                    <span class="border border-gray-500 px-2 py-0.5 rounded text-xs font-medium">X-RAY</span>
+                    <span class="bg-blue-600 px-2 py-0.5 rounded text-xs font-bold">UHD</span>
+                    <span class="border border-gray-500 px-2 py-0.5 rounded text-xs">{{ rating }}</span>
+                    <span class="text-red-500">⚡</span>
+                    <span class="bg-gray-800 p-1 rounded">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                        </svg>
+                    </span>
+                </div>
+
+                <!-- Genre -->
+                <div class="flex items-center space-x-2">
+                    <a href="#" class="text-blue-400 underline hover:text-blue-300 transition text-sm">{{ genre }}</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex  items-center gap-4 pt-4">
+                    <button (click)="onWatchClick()"
+                        class="bg-white text-black px-8 py-3.5 rounded font-bold hover:bg-gray-200 transition flex items-center space-x-2 text-base">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        <span>Watch with Prime</span>
+                    </button>
+                    <button (click)="onRentClick()"
+                        class="bg-gray-800 bg-opacity-90 hover:bg-gray-700 px-6 py-3.5 rounded font-semibold transition text-sm">
+                        Rent UHD ₹279
+                    </button>
+                    <button (click)="onMoreOptionsClick()"
+                        class="bg-gray-800 bg-opacity-90 hover:bg-gray-700 px-6 py-3.5 rounded font-medium transition text-sm">
+                        More purchase options
+                    </button>
+                    <button (click)="onTrailerClick()"
+                        class="bg-gray-900 bg-opacity-70 hover:bg-opacity-90 border border-gray-700 p-3 rounded-full transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <button (click)="onAddToListClick()"
+                        class="bg-gray-900 bg-opacity-70 hover:bg-opacity-90 border border-gray-700 p-3 rounded-full transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <button (click)="onLikeClick()" [class.text-blue-400]="isLiked"
+                        class="bg-gray-900 bg-opacity-70 hover:bg-opacity-90 border border-gray-700 p-3 rounded-full transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                        </svg>
+                    </button>
+                    <button (click)="onDislikeClick()" [class.text-red-400]="isDisliked"
+                        class="bg-gray-900 bg-opacity-70 hover:bg-opacity-90 border border-gray-700 p-3 rounded-full transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+                        </svg>
+                    </button>
+                    <button (click)="onShareClick()"
+                        class="bg-gray-900 bg-opacity-70 hover:bg-opacity-90 border border-gray-700 p-3 rounded-full transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Icon Actions -->
+                <div class="flex items-center gap-3 pt-2">
+
+                </div>
+
+                <!-- Membership Notice -->
+                <div class="flex items-start space-x-2 pt-4">
+                    <span class="text-yellow-400 text-lg">👑</span>
+                    <p class="text-sm text-gray-200 font-medium">Watch with a Prime membership</p>
+                </div>
+
+                <!-- Rental Info -->
+                <p class="text-xs text-gray-400">
+                    Rentals include 30 days to start watching this video and 48 hours to finish once started.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="p-16">
+        <app-card
+          [items]="gridItems"
+          type="grid"
+          sectionTitle="Continue Watching"
+          gridClasses="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8"
+        ></app-card>
+    </div>
+
+</div>

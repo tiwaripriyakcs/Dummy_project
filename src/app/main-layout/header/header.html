@@ -1,0 +1,138 @@
+
+ <!-- [ngClass]="{ 'bg-black': !isScrolled(), 'bg-transparent': isScrolled() }" -->
+<header  class="bg-black text-white sticky top-0 z-50  transition-colors duration-300"
+ >
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+    
+    <!-- Left: Logo -->
+    <div class="flex items-center space-x-6">
+      <a routerLink="/" class="text-xl font-bold whitespace-nowrap">
+        India <span class="text-blue-500">video</span>
+      </a>
+      
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 text-sm">
+        @for (link of navLinks; track link.path) {
+          <a [routerLink]="link.path" class="hover:text-blue-400 transition-colors">
+            {{ link.label }}
+          </a>
+        }
+      </nav>
+    </div>
+
+    <!-- Right: Icons + Button -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Search Icon -->
+      <button class="hidden md:block hover:text-gray-300 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+
+      <!-- Language Dropdown -->
+      <div class="hidden md:block relative group" 
+           (mouseenter)="setLanguageDropdown(true)" 
+           (mouseleave)="setLanguageDropdown(false)">
+        <button class="bg-transparent border border-gray-600 text-sm rounded px-3 py-1 hover:bg-gray-800 flex items-center space-x-1 transition-colors">
+          <span>{{ selectedLanguage() }}</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        
+        <!-- Language Dropdown Menu -->
+        @if (showLanguageDropdown()) {
+          <div class="absolute right-0 mt-2 w-[60%] bg-gray-800 rounded-md shadow-2xl max-h-96 overflow-y-auto animate-fadeIn">
+            <div class="grid grid-cols-3 gap-2 p-4 text-sm">
+              @for (lang of languages; track lang) {
+                <a (click)="selectLanguage(lang)" class="hover:text-blue-400 py-1 cursor-pointer transition-colors">
+                  {{ lang }}
+                </a>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Grid Icon with Dropdown -->
+      <div class="hidden md:block relative group" 
+           (mouseenter)="setGridDropdown(true)" 
+           (mouseleave)="setGridDropdown(false)">
+        <button class="hover:text-gray-300 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+        </button>
+        
+        <!-- Grid Dropdown Menu -->
+        @if (showGridDropdown()) {
+          <div class="absolute right-0 mt-2 w-96 bg-gray-800 rounded-md shadow-2xl p-6 animate-fadeIn">
+            <h3 class="text-gray-400 text-xs uppercase mb-3 font-semibold tracking-wider">Genres</h3>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              @for (genre of genres; track genre) {
+                <a href="#" class="hover:text-blue-400 text-sm transition-colors">
+                  {{ genre }}
+                </a>
+              }
+            </div>
+            
+            <h3 class="text-gray-400 text-xs uppercase mb-3 font-semibold tracking-wider">Featured Collections</h3>
+            <div class="grid grid-cols-2 gap-4">
+              @for (collection of featuredCollections; track collection) {
+                <a href="#" class="hover:text-blue-400 text-sm transition-colors">
+                  {{ collection }}
+                </a>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- User Icon with Dropdown -->
+      <div class="hidden md:block relative group" 
+           (mouseenter)="setUserDropdown(true)" 
+           (mouseleave)="setUserDropdown(false)">
+        <button class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </button>
+        
+        <!-- User Dropdown Menu -->
+        @if (showUserDropdown()) {
+          <div class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-2xl py-2 animate-fadeIn">
+            @for (item of userMenuItems; track item.path) {
+              <a [routerLink]="item.path" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors">
+                {{ item.label }}
+              </a>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- CTA Button -->
+      <a routerLink="/login" class="bg-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors cursor-pointer">
+        Join Prime
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden focus:outline-none" (click)="toggleMobileMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  @if (showMobileMenu()) {
+    <nav class="md:hidden bg-gray-900 px-4 py-3 space-y-2">
+      @for (link of navLinks; track link.path) {
+        <a [routerLink]="link.path" class="block hover:text-blue-400 transition-colors">
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+  }
+</header>

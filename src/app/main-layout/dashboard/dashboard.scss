@@ -1,0 +1,84 @@
+/* Custom animations for hero section */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations on load */
+h1 {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+p {
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+button {
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+/* Movie card animations */
+.group {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.group:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.group:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-custom {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+.group:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Backdrop blur support check */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+}
