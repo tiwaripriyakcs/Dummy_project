@@ -54,7 +54,7 @@ export class Header {
     { label: 'Movies', path: '/movies' },
     { label: 'TV shows', path: '/tv-shows' },
     { label: 'Live TV', path: '/live-tv' },
-    { label: 'Subscriptions', path: '/subscriptions' }
+    { label: 'Subscriptions', path: '/movies' }
   ];
 
   readonly userMenuItems = [
