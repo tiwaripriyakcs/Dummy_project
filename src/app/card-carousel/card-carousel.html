@@ -2,36 +2,26 @@
   <!-- Section Title -->
   <div *ngIf="sectionTitle && type !== 'hero'" class="px-16 mb-6 flex items-center gap-3">
     <h2 class="text-white text-3xl font-bold">{{ sectionTitle }}</h2>
-    <div *ngIf="showArrowIcon" 
-         class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors">
+    <div *ngIf="showArrowIcon"
+      class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors">
       <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
   </div>
 
   <!-- Hero Carousel -->
   <div *ngIf="type === 'hero'" class="relative w-full h-screen bg-[#0f171e] overflow-hidden">
-    <swiper-container
-      slides-per-view="1"
-      space-between="0"
-      loop="true"
-      [attr.autoplay-delay]="autoplayDelay"
-      autoplay-disable-on-interaction="false"
-      navigation="true"
-      pagination="true"
-      pagination-clickable="true"
-      effect="fade"
-      speed="1000"
-      class="w-full h-full hero-swiper"
-    >
+    <swiper-container slides-per-view="1" space-between="0" loop="true" [attr.autoplay-delay]="autoplayDelay"
+      autoplay-disable-on-interaction="false" navigation="true" pagination="true" pagination-clickable="true"
+      effect="fade" speed="1000" class="w-full h-full hero-swiper">
       <swiper-slide *ngFor="let item of items">
-        <div class="relative w-full h-full flex items-center" (click)="navigateToDetail(item.id)">
+        <div class="relative w-full h-full flex items-center" 
+        >
           <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat"
-               [style.background-image]="'url(' + item.image + ')'"></div>
-          
-          <div class="absolute top-0 left-0 w-full h-full z-[1]"
-               style="background: linear-gradient(to right, 
+            [style.background-image]="'url(' + item.image + ')'"></div>
+
+          <div class="absolute top-0 left-0 w-full h-full z-[1]" style="background: linear-gradient(to right, 
                  rgba(15, 23, 30, 1) 0%, 
                  rgba(15, 23, 30, 0.9) 15%,
                  rgba(15, 23, 30, 0.7) 30%,
@@ -41,54 +31,59 @@
                  rgba(15, 23, 30, 0.7) 0%, 
                  transparent 30%);">
           </div>
-          
+
           <div class="relative z-[2] max-w-[650px] px-20 text-white">
             <div class="flex items-center gap-4 mb-8">
               <svg width="70" height="28" viewBox="0 0 70 28" fill="white">
-                <path d="M18 3c-4 0-7 3-7 7s3 7 7 7 7-3 7-7-3-7-7-7zm0 11c-2 0-3.5-1.5-3.5-3.5S16 7 18 7s3.5 1.5 3.5 3.5S20 14 18 14z"/>
-                <path d="M3 3h3v14H3V3zm7 0h3l3 7V3h3v14h-3l-3-7v7h-3V3z"/>
+                <path
+                  d="M18 3c-4 0-7 3-7 7s3 7 7 7 7-3 7-7-3-7-7-7zm0 11c-2 0-3.5-1.5-3.5-3.5S16 7 18 7s3.5 1.5 3.5 3.5S20 14 18 14z" />
+                <path d="M3 3h3v14H3V3zm7 0h3l3 7V3h3v14h-3l-3-7v7h-3V3z" />
               </svg>
             </div>
-            
+
             <h1 class="text-[80px] font-black leading-[0.9] uppercase tracking-[-3px] mb-5"
-                style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+              style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
               {{ item.title }}
             </h1>
-            
+
             <p class="text-[22px] font-normal opacity-95 leading-[1.4] mb-8">
               {{ item.season }}<br>{{ item.description }}
             </p>
-            
+
             <div class="flex gap-4 mb-8 items-center">
-              <button class="bg-white/95 text-[#0f171e] border-none px-7 py-4 rounded-md text-base font-semibold cursor-pointer transition-all duration-300 hover:bg-white hover:scale-105 flex flex-col items-center leading-tight whitespace-nowrap"
-                      (click)="$event.stopPropagation()">
+              <button
+                class="bg-white/95 text-[#0f171e] border-none px-7 py-4 rounded-md text-base font-semibold cursor-pointer transition-all duration-300 hover:bg-white hover:scale-105 flex flex-col items-center leading-tight whitespace-nowrap"
+                routerLink="/login" (click)="$event.stopPropagation()">
                 <span>{{ item.buttonText || 'Watch Now' }}</span>
                 <span class="text-sm font-normal">{{ item.buttonSubtext }}</span>
               </button>
-              
-              <button class="bg-[#1a1d29]/70 backdrop-blur-[10px] border border-white/30 w-[52px] h-[52px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#1a1d29]/90 hover:scale-110 hover:border-white/50 text-white"
-                      (click)="$event.stopPropagation()">
+
+              <button
+                class="bg-[#1a1d29]/70 backdrop-blur-[10px] border border-white/30 w-[52px] h-[52px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#1a1d29]/90 hover:scale-110 hover:border-white/50 text-white"
+                routerLink="/login" (click)="$event.stopPropagation()">
                 <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M12 5v14M5 12h14" stroke-linecap="round"/>
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
                 </svg>
               </button>
-              
-              <button class="bg-[#1a1d29]/70 backdrop-blur-[10px] border border-white/30 w-[52px] h-[52px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#1a1d29]/90 hover:scale-110 hover:border-white/50 text-white"
-                      (click)="$event.stopPropagation()">
+
+              <button
+                class="bg-[#1a1d29]/70 backdrop-blur-[10px] border border-white/30 w-[52px] h-[52px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#1a1d29]/90 hover:scale-110 hover:border-white/50 text-white"
+                (click)="$event.stopPropagation()">
                 <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 16v-4M12 8h.01" stroke-linecap="round"/>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 16v-4M12 8h.01" stroke-linecap="round" />
                 </svg>
               </button>
             </div>
-            
+
             <p class="flex items-center gap-3 text-[15px] opacity-85 m-0">
               <span class="text-lg">👑</span>
               <span>Watch with a Prime membership</span>
             </p>
           </div>
-          
-          <div *ngIf="item.rating" class="absolute bottom-10 right-10 z-10 bg-black/60 backdrop-blur-[10px] px-4 py-2 rounded text-[15px] font-semibold border border-white/20 text-white">
+
+          <div *ngIf="item.rating"
+            class="absolute bottom-10 right-10 z-10 bg-black/60 backdrop-blur-[10px] px-4 py-2 rounded text-[15px] font-semibold border border-white/20 text-white">
             {{ item.rating }}
           </div>
         </div>
@@ -100,21 +95,21 @@
   <div *ngIf="type === 'recommended'" class="px-16">
     <div class="relative group">
       <swiper-container [slidesPerView]="5" [spaceBetween]="20" [loop]="true"
-          [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true"
-          [pagination]="{ clickable: true }" class="w-full h-full hero-swiper">
+        [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true" [pagination]="{ clickable: true }"
+        class="w-full h-full hero-swiper">
         <swiper-slide *ngFor="let item of items" [style.width.px]="slideWidth">
-          <div class="relative overflow-hidden rounded-lg cursor-pointer group/card" 
-               (click)="navigateToDetail(item.id)">
+          <div class="relative overflow-hidden rounded-lg cursor-pointer group/card"
+            (click)="navigateToDetail(item.id)">
             <img [src]="item.image" [alt]="item.title"
-                class="w-full h-[420px] object-cover transition-transform duration-300 group-hover/card:scale-110">
+              class="w-full h-[420px] object-cover transition-transform duration-300 group-hover/card:scale-110">
 
             <div *ngIf="item.badge"
-                class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded z-10">
+              class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded z-10">
               {{ item.badge }}
             </div>
 
             <div *ngIf="item.languages"
-                class="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] px-2 py-1 rounded z-10">
+              class="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] px-2 py-1 rounded z-10">
               {{ item.languages }}
             </div>
           </div>
@@ -127,11 +122,12 @@
   <div *ngIf="type === 'subscription'" class="px-16">
     <div class="relative group">
       <swiper-container [slidesPerView]="5" [spaceBetween]="20" [loop]="true"
-          [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true"
-          [pagination]="{ clickable: true }" class="w-full h-full hero-swiper">
+        [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true" [pagination]="{ clickable: true }"
+        class="w-full h-full hero-swiper">
         <swiper-slide *ngFor="let item of items" [style.width.px]="slideWidth">
-          <div class="relative bg-[#1a1d29] rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl group"
-               (click)="navigateToDetail(item.id)">
+          <div
+            class="relative bg-[#1a1d29] rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl group"
+            (click)="navigateToDetail(item.id)">
             <img [src]="item.image" [alt]="item.title" class="w-full h-[280px] object-cover">
 
             <div class="p-6">
@@ -142,8 +138,8 @@
               <div class="text-white text-2xl font-bold mb-3">{{ item.price }}</div>
 
               <button
-                  class="w-full bg-transparent border-2 border-white/30 text-white py-2 rounded hover:bg-white/10 transition-colors text-sm font-semibold"
-                  (click)="$event.stopPropagation()">
+                class="w-full bg-transparent border-2 border-white/30 text-white py-2 rounded hover:bg-white/10 transition-colors text-sm font-semibold"
+                (click)="$event.stopPropagation()">
                 Learn More
               </button>
 
@@ -161,28 +157,28 @@
   <div *ngIf="type === 'top10'" class="px-16">
     <div class="relative group">
       <swiper-container [slidesPerView]="5" [spaceBetween]="20" [loop]="true"
-          [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true"
-          [pagination]="{ clickable: true }" class="w-full h-full hero-swiper">
+        [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true" [pagination]="{ clickable: true }"
+        class="w-full h-full hero-swiper">
         <swiper-slide *ngFor="let item of items; let i = index" [style.width.px]="slideWidth">
           <div class="relative overflow-hidden rounded-lg cursor-pointer group/item"
-               (click)="navigateToDetail(item.id)">
+            (click)="navigateToDetail(item.id)">
             <div class="absolute left-0 top-0 bottom-0 w-[100px] flex items-center justify-center z-10">
               <span class="text-[140px] font-black text-white/90"
-                  style="text-shadow: -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000;">
+                style="text-shadow: -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000;">
                 {{ i + 1 }}
               </span>
             </div>
 
             <img [src]="item.image" [alt]="item.title"
-                class="w-full h-[190px] object-cover transition-all duration-300 group-hover/item:scale-110 group-hover/item:brightness-50">
+              class="w-full h-[190px] object-cover transition-all duration-300 group-hover/item:scale-110 group-hover/item:brightness-50">
 
             <div *ngIf="item.badge"
-                class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded z-20">
+              class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded z-20">
               {{ item.badge }}
             </div>
 
             <div
-                class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover/item:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 z-20">
+              class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover/item:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 z-20">
               <h3 class="text-white text-xl font-bold mb-2">{{ item.title }}</h3>
 
               <div class="flex items-center gap-2 mb-2 text-sm text-white/80">
@@ -196,8 +192,8 @@
 
               <div class="flex gap-2">
                 <button
-                    class="flex-1 bg-white text-black py-2 px-4 rounded font-semibold hover:bg-white/90 transition-colors flex items-center justify-center gap-2"
-                    (click)="$event.stopPropagation()">
+                  class="flex-1 bg-white text-black py-2 px-4 rounded font-semibold hover:bg-white/90 transition-colors flex items-center justify-center gap-2"
+                  (click)="$event.stopPropagation()">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
@@ -205,8 +201,8 @@
                 </button>
 
                 <button
-                    class="w-10 h-10 bg-white/20 backdrop-blur text-white rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
-                    (click)="$event.stopPropagation()">
+                  class="w-10 h-10 bg-white/20 backdrop-blur text-white rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                  (click)="$event.stopPropagation()">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M12 5v14M5 12h14" stroke-linecap="round" />
                   </svg>
@@ -215,7 +211,7 @@
             </div>
 
             <div *ngIf="item.languages"
-                class="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] px-2 py-1 rounded z-10">
+              class="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] px-2 py-1 rounded z-10">
               {{ item.languages }}
             </div>
           </div>
@@ -227,20 +223,21 @@
   <!-- Grid Layout -->
   <div *ngIf="type === 'grid'" class="px-16">
     <swiper-container [slidesPerView]="5" [spaceBetween]="20" [loop]="true"
-        [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true"
-        [pagination]="{ clickable: false }" class="w-full h-full hero-swiper">
+      [autoplay]="{ delay: 3000, disableOnInteraction: false }" [navigation]="true" [pagination]="{ clickable: false }"
+      class="w-full h-full hero-swiper">
       <swiper-slide *ngFor="let item of items; let i = index" [style.width.px]="slideWidth">
-        <div class="relative overflow-hidden rounded-lg cursor-pointer group transition-transform duration-300 hover:scale-105"
-             (click)="navigateToDetail(item.id)">
+        <div
+          class="relative overflow-hidden rounded-lg cursor-pointer group transition-transform duration-300 hover:scale-105"
+          (click)="navigateToDetail(item.id)">
           <img [src]="item.image" [alt]="item.title" class="w-full h-[300px] object-cover">
 
           <div *ngIf="item.badge"
-              class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded">
+            class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded">
             {{ item.badge }}
           </div>
 
           <div
-              class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
             <div>
               <h3 class="text-white text-lg font-bold">{{ item.title }}</h3>
               <p *ngIf="item.description" class="text-white/80 text-sm mt-1">{{ item.description }}</p>

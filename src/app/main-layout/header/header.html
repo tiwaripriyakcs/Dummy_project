@@ -43,7 +43,7 @@
         
         <!-- Language Dropdown Menu -->
         @if (showLanguageDropdown()) {
-          <div class="absolute right-0 mt-2 w-[60%] bg-gray-800 rounded-md shadow-2xl max-h-96 overflow-y-auto animate-fadeIn">
+          <div class="absolute right-0 mt-2 w-96 bg-gray-800 rounded-md shadow-2xl max-h-96 overflow-y-auto animate-fadeIn">
             <div class="grid grid-cols-3 gap-2 p-4 text-sm">
               @for (lang of languages; track lang) {
                 <a (click)="selectLanguage(lang)" class="hover:text-blue-400 py-1 cursor-pointer transition-colors">
