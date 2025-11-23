@@ -1,0 +1,57 @@
+/* Existing CSS for heading and wrapper */
+.section-heading {
+  color: black; 
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-left: 20px; 
+}
+
+/* NEW: Container to hold the arrows and the scrollable wrapper */
+.carousel-viewport {
+  position: relative; /* Crucial for positioning arrows */
+  margin: 0 20px; /* Space on the sides */
+}
+
+.cards-wrapper {
+  /* Existing styles */
+  display: flex;
+  overflow-x: auto; 
+  scroll-behavior: smooth; /* Smooth scrolling animation */
+  padding-bottom: 20px; /* Ensures space below for content */
+  
+  /* Hide standard scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* NEW: Arrow Styling */
+.nav-arrow {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 20; /* Ensure arrows are above cards */
+  height: 100px; /* Large clickable area */
+  width: 40px;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+
+
+.left-arrow {
+  left: 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.right-arrow {
+  right: 0;
+  border-radius: 6px 0 0 6px;
+}

@@ -1,1 +1,22 @@
-<p>live-tv works!</p>
+<div class="carousel-container pt-8">
+  <div class="carousel-container">
+  <h2 class="section-heading">{{ carouselHeading }}</h2>
+
+  <div class="carousel-viewport">
+    
+    <button class="nav-arrow left-arrow" (click)="scrollLeft()">
+      &#10094; </button>
+    
+    <div class="cards-wrapper" #cardsWrapper>
+      <app-tv-card 
+        *ngFor="let item of cardItems" 
+        [cardData]="item"
+      ></app-tv-card>
+    </div>
+    
+    <button class="nav-arrow right-arrow" (click)="scrollRight()">
+      &#10095; </button>
+
+  </div>
+</div>
+</div>
