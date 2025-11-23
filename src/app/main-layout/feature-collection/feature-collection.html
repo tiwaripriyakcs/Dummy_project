@@ -1,0 +1,46 @@
+<div class="w-full bg-[#0f171e] pt-12 ">
+  <h2 class="text-white xl:text-3xl lg:text-xl text-lg font-bold px-16 ">{{ collectionName }}</h2>
+  <div class="text-white min-h-screen pt-3  ">
+    <!-- Tabs -->
+    <div class="flex lg:space-x-8 space-x-6  mb-6 hover:bg-gray-900 px-6 py-3 mx-14">
+      <button *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.border-b-2]="selectedTab === tab"
+        [class.border-white]="selectedTab === tab"
+        class="pb-3 text-lg font-semibold hover:text-blue-400  transition-all ">
+        {{ tab }}
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div *ngIf="selectedTab === 'All'" class="space-y-6">
+      <!-- Subscriptions you might like -->
+      <app-card-carousel [items]="subscriptionItems" type="subscription"
+        sectionTitle="Subscriptions you might like"></app-card-carousel>
+
+      <!-- Top 10 with subscriptions -->
+      <app-card-carousel [items]="top10Items" type="top10" sectionTitle="Top 10 with subscriptions"
+        [showArrowIcon]="true" [slideWidth]="340" [spaceBetween]="16"></app-card-carousel>
+
+      <!-- Optional: Grid Layout -->
+      <app-card-carousel [items]="gridItems" type="grid" sectionTitle="Continue Watching"
+        gridClasses="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></app-card-carousel>
+
+    </div>
+
+    <div *ngIf="selectedTab === 'Movie'" class="text-gray-300">
+      <!-- Top 10 with subscriptions -->
+      <app-card-carousel [items]="top10Items" type="top10" sectionTitle="Top 10 with subscriptions"
+        [showArrowIcon]="true" [slideWidth]="340" [spaceBetween]="16"></app-card-carousel>
+
+    </div>
+
+    <div *ngIf="selectedTab === 'Tv-show'" class="text-gray-300">
+
+      <!-- Optional: Grid Layout -->
+      <app-card-carousel [items]="gridItems" type="grid" sectionTitle="Continue Watching"
+        gridClasses="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></app-card-carousel>
+    </div>
+
+
+  </div>
+
+</div>

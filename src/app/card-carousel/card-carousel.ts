@@ -31,6 +31,7 @@ export type CarouselType = 'hero' | 'recommended' | 'subscription' | 'top10' | '
 })
 
 export class CardCarousel {
+  public dummyImage="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=300&h=400&fit=crop&q=80";
   private router = inject(Router);
   @Input() items: CarouselItem[] = [];
   @Input() type: CarouselType = 'recommended';

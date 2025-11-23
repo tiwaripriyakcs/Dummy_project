@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { CardCarousel, CarouselItem } from '../../card-carousel/card-carousel';
 import { Card } from '../card/card';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 interface CarouselSlide {
   id: number;
   title: string;
@@ -22,6 +22,8 @@ interface CarouselSlide {
 })
 export class Detail {
   id!: string;
+    private router = inject(Router);
+
   private route = inject(ActivatedRoute);
   // Movie Data
   movieTitle = 'Madharaasi';
@@ -243,4 +245,7 @@ export class Detail {
         'Go behind the making of “Our Fault”, with unseen moments and exclusive interviews from the main cast.',
     },
   ];
+    openNotificationPanel() {
+    this.router.navigate([{ outlets: { sidepanel: ['notification'] } }]);
+  }
 }
