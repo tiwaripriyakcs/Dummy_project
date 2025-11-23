@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { Dashboard } from './main-layout/dashboard/dashboard';
 import { Movies } from './main-layout/movies/movies';
 import { TvShows } from './main-layout/tv-shows/tv-shows';
-import { Login } from './login/login';
 import { MainLayout } from './main-layout/main-layout';
 import { TermsCondition } from './main-layout/terms-condition/terms-condition';
 import { Detail } from './main-layout/detail/detail';
@@ -11,6 +10,7 @@ import { NotificationSlide } from './main-layout/notification-slide/notification
 import { LiveTv } from './main-layout/live-tv/live-tv';
 import { FeatureCollection } from './main-layout/feature-collection/feature-collection';
 import { HelpPage } from './main-layout/help-page/help-page';
+import { LoginComponent } from './login/login';
 
 export const routes: Routes = [
   {
@@ -39,6 +39,9 @@ export const routes: Routes = [
 
     ],
   },
-  { path: 'login', component: Login }, // no header/footer
+ {
+    path: 'login',
+    component: LoginComponent
+  },
 
 ];
