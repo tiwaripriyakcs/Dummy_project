@@ -15,12 +15,12 @@ export class HelpPage {
   // The accordion data structure
   accordionData = [
     { 
-      title: 'Setting Up Prime Video', 
-      content: 'Information about setting up your Prime Video account and devices. This includes downloading the app, logging in, and linking your TV or console to your Amazon account.' 
+      title: 'Setting Up Video Hub', 
+      content: 'Information about setting up your Video Hub account and devices. This includes downloading the app, logging in, and linking your TV or console to your Amazon account.' 
     },
     { 
-      title: 'Cancel My Prime Video Subscription', 
-      content: 'Detailed steps on how to cancel your Prime Video membership and related add-ons. You can usually find this option under your Account & Settings > Your Membership.' 
+      title: 'Cancel My Video Hub Subscription', 
+      content: 'Detailed steps on how to cancel your Video Hub membership and related add-ons. You can usually find this option under your Account & Settings > Your Membership.' 
     },
     { 
       title: 'Restrictions & Parental Controls', 
@@ -31,7 +31,7 @@ export class HelpPage {
       content: 'Troubleshooting common issues like buffering, error codes, and black screens. This section also covers which devices are supported for HD and 4K streaming.'
     },
     {
-      title: 'Prime Video Audio Tracks',
+      title: 'Video Hub Audio Tracks',
       content: 'Information on selecting alternate audio tracks, including different languages and audio descriptions, during playback on various devices.'
     }
   ];

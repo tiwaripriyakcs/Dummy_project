@@ -14,21 +14,21 @@
     <div *ngIf="selectedTab === 'All'" class="space-y-6">
       <!-- Subscriptions you might like -->
       <app-card-carousel [items]="subscriptionItems" type="subscription"
-        sectionTitle="Subscriptions you might like"></app-card-carousel>
+        sectionTitle="Movies"></app-card-carousel>
 
       <!-- Top 10 with subscriptions -->
-      <app-card-carousel [items]="top10Items" type="top10" sectionTitle="Top 10 with subscriptions"
+      <app-card-carousel [items]="top10Items" type="top10" sectionTitle="TV shows"
         [showArrowIcon]="true" [slideWidth]="340" [spaceBetween]="16"></app-card-carousel>
 
       <!-- Optional: Grid Layout -->
-      <app-card-carousel [items]="gridItems" type="grid" sectionTitle="Continue Watching"
+      <app-card-carousel [items]="gridItems" type="grid" sectionTitle="Shop: Movies to rent"
         gridClasses="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></app-card-carousel>
 
     </div>
 
     <div *ngIf="selectedTab === 'Movie'" class="text-gray-300">
       <!-- Top 10 with subscriptions -->
-      <app-card-carousel [items]="top10Items" type="top10" sectionTitle="Top 10 with subscriptions"
+      <app-card-carousel [items]="top10Items" type="top10" sectionTitle="Movies"
         [showArrowIcon]="true" [slideWidth]="340" [spaceBetween]="16"></app-card-carousel>
 
     </div>
@@ -36,7 +36,7 @@
     <div *ngIf="selectedTab === 'Tv-show'" class="text-gray-300">
 
       <!-- Optional: Grid Layout -->
-      <app-card-carousel [items]="gridItems" type="grid" sectionTitle="Continue Watching"
+      <app-card-carousel [items]="gridItems" type="grid" sectionTitle="TV shows"
         gridClasses="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></app-card-carousel>
     </div>
 
