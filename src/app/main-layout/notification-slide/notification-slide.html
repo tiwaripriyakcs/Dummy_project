@@ -1,0 +1,41 @@
+<div class="fixed top-0 right-0 h-full w-full md:w-[400px] bg-[#0f171e] text-white shadow-2xl flex flex-col z-50">
+  <div class="flex items-center justify-between p-5 border-b border-gray-700">
+    <h2 class="text-xl font-semibold">Send us feedback</h2>
+    <button class="text-gray-400 hover:text-white text-2xl" (click)="closePanel()">&times;</button>
+  </div>
+
+  <div class="flex-1 overflow-y-auto p-6 space-y-6">
+    <div>
+      <p class="text-sm text-gray-300 mb-3">Which device is your feedback for?</p>
+      <label class="flex items-center gap-3 cursor-pointer hover:bg-gray-800 p-3 rounded-lg transition">
+        <input type="radio" name="feedback-device" class="accent-blue-500" />
+        <span>No device, it's about the website</span>
+      </label>
+      <label class="flex items-center gap-3 cursor-pointer hover:bg-gray-800 p-3 rounded-lg transition">
+        <input type="radio" name="feedback-device" class="accent-blue-500" />
+        <span>Smart TV</span>
+      </label>
+      <label class="flex items-center gap-3 cursor-pointer hover:bg-gray-800 p-3 rounded-lg transition">
+        <input type="radio" name="feedback-device" class="accent-blue-500" />
+        <span>Mobile App</span>
+      </label>
+    </div>
+
+    <div>
+      <label class="block text-sm text-gray-300 mb-2">Tell us more</label>
+      <textarea
+        placeholder="Describe your issue or suggestion..."
+        class="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-sm text-white focus:ring-2 focus:ring-blue-500 outline-none"
+        rows="4"
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-700 p-5">
+    <button (click)="closePanel()" 
+      class="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-3 rounded-lg"
+    >
+      Continue
+    </button>
+  </div>
+</div>

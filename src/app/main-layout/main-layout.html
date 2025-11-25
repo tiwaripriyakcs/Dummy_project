@@ -1,5 +1,30 @@
- <app-header></app-header>
+ <!-- <app-header></app-header>
     <main class="min-h-screen bg-gray-50">
       <router-outlet></router-outlet>
     </main>
-    <app-footer></app-footer>
+    <app-footer></app-footer> -->
+
+    <app-header></app-header>
+
+<main class="min-h-screen bg-gray-50 relative overflow-hidden">
+  <!-- Main Page Content -->
+  <router-outlet></router-outlet>
+
+  <!-- Right-side sliding panel outlet -->
+  <div
+    class="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-[#0f171e] text-white shadow-2xl z-50 transition-transform duration-300"
+    [class.translate-x-full]="!isPanelOpen"
+    [class.translate-x-0]="isPanelOpen"
+  >
+    <router-outlet name="sidepanel"></router-outlet>
+  </div>
+
+  <!-- Optional: Dark overlay behind panel -->
+  <div
+    class="fixed inset-0 bg-black/50 z-40 transition-opacity duration-300"
+    *ngIf="isPanelOpen"
+    (click)="closePanel()"
+  ></div>
+</main>
+
+<app-footer></app-footer>

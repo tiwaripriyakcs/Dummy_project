@@ -1,0 +1,73 @@
+.card {
+  /* Dimensions and Layout */
+  width: 350px; /* Card width */
+  height: 200px; /* Card height */
+  margin-right: 15px; /* Spacing between cards in the carousel */
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  
+  /* Background Image Styling */
+  background-size: cover;
+  background-position: center;
+  
+  /* Flex for Content Positioning */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Pushes content to the bottom */
+  padding: 10px;
+  
+  /* Visual Effects */
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.03); /* Subtle hover effect */
+}
+
+/* LIVE Label (Top Left) */
+.live-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #ff0000; /* Red background */
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+/* Content Text (Bottom) */
+.content-area {
+  z-index: 1; 
+  color: white;
+  /* Add a subtle dark gradient overlay for text readability */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  margin: -10px; /* Extend gradient padding to cover bottom area */
+  padding: 10px; 
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 12px;
+  margin: 2px 0 0;
+  line-height: 1.2;
+}
+
+.time {
+  font-size: 11px;
+  font-weight: 600;
+  color: #a0a0a0; /* Lighter color for date/time */
+  margin: 4px 0 0;
+}

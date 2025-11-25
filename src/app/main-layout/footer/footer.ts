@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
 export class Footer {
 currentYear = new Date().getFullYear();
   footerLinks = [
-    { text: 'Terms and Privacy Notice', url: '#' },
+    { text: 'Terms and Privacy Notice', url: 'help' },
     { text: 'Send us feedback', url: '#' },
-    { text: 'Help', url: '#' }
+    { text: 'Help', url: 'help' }
   ];
 }
