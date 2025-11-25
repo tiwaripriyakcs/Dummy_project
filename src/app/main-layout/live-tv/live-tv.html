@@ -1,0 +1,44 @@
+<div class="carousel-container pt-8">
+
+  <h2 class="section-heading">{{ carouselHeading }}</h2>
+
+  <div class="carousel-viewport">
+
+    <button class="nav-arrow left-arrow" (click)="scrollLeft('fancode')">
+      &#10094;
+    </button>
+
+    <div class="cards-wrapper" #fancodeWrapper>
+      <app-tv-card *ngFor="let item of cardItems" [cardData]="item"></app-tv-card>
+    </div>
+
+    <button class="nav-arrow right-arrow" (click)="scrollRight('fancode')">
+      &#10095;
+    </button>
+
+  </div>
+</div>
+
+
+<!-- ===========================  SECOND CAROUSEL  =========================== -->
+
+<div class="carousel-container pt-8">
+
+  <h2 class="section-heading">{{ cardNpc }}</h2>
+
+  <div class="carousel-viewport">
+
+    <button class="nav-arrow left-arrow" (click)="scrollLeft('nba')">
+      &#10094;
+    </button>
+
+    <div class="cards-wrapper" #nbaWrapper>
+      <app-tv-card *ngFor="let item of cardItemsnpc" [cardData]="item"></app-tv-card>
+    </div>
+
+    <button class="nav-arrow right-arrow" (click)="scrollRight('nba')">
+      &#10095;
+    </button>
+
+  </div>
+</div>

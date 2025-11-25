@@ -81,429 +81,297 @@ heroItems: CarouselItem[] = [
   ngOnInit(): void {
     this.registerSwiperElements();
   }  // FILMFARE OTT AWARD WINNERS (10+ items)
-  recommendedItems: CarouselItem[] = [
-    {
-      id: 1,
-      title: 'Panchayat',
-      image: 'https://images.unsplash.com/photo-1588392382834-a891154bca4d?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 2,
-      title: 'Mirzapur',
-      image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 3,
-      title: 'The Family Man',
-      image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 4,
-      title: 'Mumbai Diaries 26/11',
-      image: 'https://images.unsplash.com/photo-1574267432644-f74f8ec93e1a?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 5,
-      title: 'Paatal Lok',
-      image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 6,
-      title: 'Four More Shots Please',
-      image: 'https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 7,
-      title: 'Made in Heaven',
-      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 8,
-      title: 'Breathe',
-      image: 'https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 9,
-      title: 'Inside Edge',
-      image: 'https://images.unsplash.com/photo-1549834125-82d3c48159a3?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 10,
-      title: 'Tandav',
-      image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 11,
-      title: 'Farzi',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    },
-    {
-      id: 12,
-      title: 'Dahaad',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=600&fit=crop&q=80',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true
-    }
-  ];
+  recommendedItems: CarouselItem[] =[
+  {
+    id: 1,
+    title: 'Sacred Games',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.hGHwo52eLSp9Kcyz5sF5JQHaEK?pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  },
+  {
+    id: 2,
+    title: 'The Harshad Mehta Story',
+    image: 'https://tse3.mm.bing.net/th/id/OIP.hmtl1Tm05yN_Gr7r5-Wb-gHaEK?pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  },
+  {
+    id: 3,
+    title: 'Panchayat',
+    image: 'https://tse2.mm.bing.net/th/id/OIP.v9DmaRYMvKDjEtcg-UiXOAHaEK?pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  },
+  {
+    id: 4,
+    title: 'Mirzapur',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.Rioje5FWQhysQZbxMUNskAHaEK?pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  },
+  {
+    id: 5,
+    title: 'The Family Man',
+    image: 'https://tse4.mm.bing.net/th?id=OIF.HY%2fBQ%2fFhxL2tjieLWK7qlA&pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  },
+  {
+    id: 6,
+    title: 'Aspirants',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.epeOH3B0TnyeQHxT-lz7hgHaD4?pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  },
+  {
+    id: 7,
+    title: 'Kota Factory',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.oj_OYjyWOFafVgHnjNxZ5QHaEK?pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  },
+  {
+    id: 8,
+    title: 'Paatal Lok',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.mdy6RUI7aTF1TcFf1XHoYAHaFj?pid=Api&P=0&h=180',
+    badge: 'IMDB TOP',
+    isCrowned: true
+  }
+]
+
 
   // TOP-RATED TV SHOWS ON IMDB (15+ items)
   subscriptionItems: CarouselItem[] = [
-    {
-      id: 1,
-      title: 'Farzi',
-      image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop&q=80',
-      rating: '8.5',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Crime thriller series'
-    },
-    {
-      id: 2,
-      title: 'Aspirants',
-      image: 'https://images.unsplash.com/photo-1574267432644-f74f8ec93e1a?w=400&h=600&fit=crop&q=80',
-      rating: '9.1',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Drama about UPSC aspirants'
-    },
-    {
-      id: 3,
-      title: 'Panchayat',
-      image: 'https://images.unsplash.com/photo-1588392382834-a891154bca4d?w=400&h=600&fit=crop&q=80',
-      rating: '8.9',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Comedy drama set in rural India'
-    },
-    {
-      id: 4,
-      title: 'Paatal Lok',
-      image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=600&fit=crop&q=80',
-      rating: '8.1',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Crime thriller'
-    },
-    {
-      id: 5,
-      title: 'Mirzapur',
-      image: 'https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400&h=600&fit=crop&q=80',
-      rating: '8.4',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Crime action thriller'
-    },
-    {
-      id: 6,
-      title: 'The Family Man',
-      image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=600&fit=crop&q=80',
-      rating: '8.7',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Action thriller spy series'
-    },
-    {
-      id: 7,
-      title: 'Gullak',
-      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=600&fit=crop&q=80',
-      rating: '8.8',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Family comedy drama'
-    },
-    {
-      id: 8,
-      title: 'Suzhal',
-      image: 'https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?w=400&h=600&fit=crop&q=80',
-      rating: '8.2',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Tamil mystery thriller'
-    },
-    {
-      id: 9,
-      title: 'Breathe',
-      image: 'https://images.unsplash.com/photo-1549834125-82d3c48159a3?w=400&h=600&fit=crop&q=80',
-      rating: '8.3',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Psychological thriller'
-    },
-    {
-      id: 10,
-      title: 'Mumbai Diaries 26/11',
-      image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=600&fit=crop&q=80',
-      rating: '8.6',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Medical drama'
-    },
-    {
-      id: 11,
-      title: 'Inside Edge',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=600&fit=crop&q=80',
-      rating: '7.9',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Cricket drama'
-    },
-    {
-      id: 12,
-      title: 'Made in Heaven',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=600&fit=crop&q=80',
-      rating: '8.3',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Drama about wedding planners'
-    },
-    {
-      id: 13,
-      title: 'Hostel Daze',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&h=600&fit=crop&q=80',
-      rating: '8.7',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'College comedy'
-    },
-    {
-      id: 14,
-      title: 'Comicstaan',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=600&fit=crop&q=80',
-      rating: '7.8',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Stand-up comedy competition'
-    },
-    {
-      id: 15,
-      title: 'The Last Hour',
-      image: 'https://images.unsplash.com/photo-1603912699214-92627f304eb6?w=400&h=600&fit=crop&q=80',
-      rating: '7.5',
-      badge: 'AMAZON ORIGINAL',
-      isCrowned: true,
-      description: 'Supernatural thriller'
-    }
-  ];
+  {
+    "id": 1,
+    "title": "Farzi",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.COWJf5704qiPYkyd4I-cBwHaEK?pid=Api&P=0&h=180",
+    "rating": "8.5",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Crime thriller series"
+  },
+  {
+    "id": 2,
+    "title": "Aspirants",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.epeOH3B0TnyeQHxT-lz7hgHaD4?pid=Api&P=0&h=180",
+    "rating": "9.1",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Drama about UPSC aspirants"
+  },
+  {
+    "id": 3,
+    "title": "Panchayat",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.TgHlDAug0z4sFcM50XJJ7gHaE8?pid=Api&P=0&h=180",
+    "rating": "8.9",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Comedy drama set in rural India"
+  },
+  {
+    "id": 4,
+    "title": "Paatal Lok",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.fIyiNUeXSDhB1wEIQfYldgHaEK?pid=Api&P=0&h=180",
+    "rating": "8.1",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Crime thriller"
+  },
+  {
+    "id": 5,
+    "title": "Mirzapur",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.ahJqXLEH71MmQUXcDbRQHwHaEK?pid=Api&P=0&h=180",
+    "rating": "8.4",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Crime action thriller"
+  },
+  {
+    "id": 6,
+    "title": "The Family Man",
+    "image": "https://tse2.mm.bing.net/th/id/OIF.9E2douZB24B1KMj6gz5r9g?pid=Api&P=0&h=180",
+    "rating": "8.7",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Action thriller spy series"
+  },
+  {
+    "id": 7,
+    "title": "Gullak",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.WKeryGSfL-0FO3sPePbvzQHaEK?pid=Api&P=0&h=180",
+    "rating": "8.8",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Family comedy drama"
+  },
+  {
+    "id": 8,
+    "title": "Suzhal",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.tu8s4pXVfT5PEW0WTyqlZQHaEK?pid=Api&P=0&h=180",
+    "rating": "8.2",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Tamil mystery thriller"
+  },
+  {
+    "id": 9,
+    "title": "Breathe",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.lPd5p2huIsht656utXs36AHaEc?pid=Api&P=0&h=180",
+    "rating": "8.3",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Psychological thriller"
+  },
+  {
+    "id": 10,
+    "title": "Mumbai Diaries 26/11",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.T_7aaSsqzR7avc1WH-YjTgHaFj?pid=Api&P=0&h=180",
+    "rating": "8.6",
+    "badge": "AMAZON ORIGINAL",
+    "isCrowned": true,
+    "description": "Medical drama"
+  },
+  
+]
+
 
   // THROWBACK TV (12+ items)
   top10Items: CarouselItem[] = [
-    {
-      id: 1,
-      title: 'Dora the Explorer',
-      image: 'https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400&h=600&fit=crop&q=80',
-      badge: 'KIDS',
-      isCrowned: true,
-      description: 'Educational adventure'
-    },
-    {
-      id: 2,
-      title: 'Pokémon Indigo League',
-      image: 'https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?w=400&h=600&fit=crop&q=80',
-      badge: 'ANIME',
-      isCrowned: true,
-      description: 'Classic anime series'
-    },
-    {
-      id: 3,
-      title: 'Supernatural',
-      image: 'https://images.unsplash.com/photo-1574267432644-f74f8ec93e1a?w=400&h=600&fit=crop&q=80',
-      badge: 'HORROR',
-      isCrowned: true,
-      description: '15 seasons of supernatural adventures'
-    },
-    {
-      id: 4,
-      title: 'Two and a Half Men',
-      image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=600&fit=crop&q=80',
-      badge: 'COMEDY',
-      isCrowned: true,
-      description: 'Classic sitcom'
-    },
-    {
-      id: 5,
-      title: 'Shaktimaan',
-      image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop&q=80',
-      badge: 'SUPERHERO',
-      isCrowned: true,
-      description: 'Indian superhero series'
-    },
-    {
-      id: 6,
-      title: 'Friends',
-      image: 'https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400&h=600&fit=crop&q=80',
-      badge: 'COMEDY',
-      isCrowned: true,
-      description: 'Iconic sitcom'
-    },
-    {
-      id: 7,
-      title: 'The Big Bang Theory',
-      image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=600&fit=crop&q=80',
-      badge: 'COMEDY',
-      isCrowned: true,
-      description: 'Nerdy comedy series'
-    },
-    {
-      id: 8,
-      title: 'Scooby-Doo',
-      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=600&fit=crop&q=80',
-      badge: 'CARTOON',
-      isCrowned: true,
-      description: 'Mystery solving gang'
-    },
-    {
-      id: 9,
-      title: 'Tom and Jerry',
-      image: 'https://images.unsplash.com/photo-1549834125-82d3c48159a3?w=400&h=600&fit=crop&q=80',
-      badge: 'CARTOON',
-      isCrowned: true,
-      description: 'Classic cat and mouse'
-    },
-    {
-      id: 10,
-      title: 'The Office',
-      image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=600&fit=crop&q=80',
-      badge: 'COMEDY',
-      isCrowned: true,
-      description: 'Mockumentary sitcom'
-    },
-    {
-      id: 11,
-      title: 'Breaking Bad',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=600&fit=crop&q=80',
-      badge: 'DRAMA',
-      isCrowned: true,
-      description: 'Crime drama masterpiece'
-    },
-    {
-      id: 12,
-      title: 'Game of Thrones',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=600&fit=crop&q=80',
-      badge: 'FANTASY',
-      isCrowned: true,
-      description: 'Epic fantasy saga'
-    }
-  ];
+  {
+    "id": 1,
+    "title": "Two and a Half Men",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.c7V83bxlDywuBO43T1_YugHaFj?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Classic sitcom"
+  },
+  {
+    "id": 2,
+    "title": "Friends",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.fqMrgikZKGrKcIuCFrZuBwHaE7?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Iconic sitcom"
+  },
+  {
+    "id": 3,
+    "title": "The Big Bang Theory",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.v0r0P3XO_KLts0wtLy_cpAHaKl?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Nerdy comedy series"
+  },
+  {
+    "id": 4,
+    "title": "The Office",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.8EIvhYZM6H4yUWDcpOoFHwHaEK?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Mockumentary sitcom"
+  },
+  {
+    "id": 5,
+    "title": "How I Met Your Mother",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.lZ9yi3K5JYkNdBMJLqUMEAHaLH?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Friends and love story comedy"
+  },
+  {
+    "id": 6,
+    "title": "Brooklyn Nine-Nine",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.FooCErw9CbdgZcXl5ZbRxQHaFj?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Funny police procedural comedy"
+  },
+  {
+    "id": 7,
+    "title": "Modern Family",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.-WVrLRnPXJRVL_kifdZlswHaEK?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Family sitcom with humor"
+  },
+  {
+    "id": 8,
+    "title": "Arrested Development",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.51tE1vew1D4WkRMRzOZOswHaD5?pid=Api&P=0&h=180",
+    "badge": "COMEDY",
+    "isCrowned": true,
+    "description": "Comedy about a dysfunctional family"
+  }
+]
+
 
   // RECOMMENDED CAROUSEL DATA (15 items)
   gridItems: CarouselItem[] = [
-    {
-      id: 1,
-      title: 'Demon Slayer',
-      image: 'https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400&h=600&fit=crop&q=80',
-      badge: 'DEAL',
-      languages: 'JAPANESE | HINDI | TAMIL | TELUGU'
-    },
-    {
-      id: 2,
-      title: 'Masters of Sex',
-      image: 'https://images.unsplash.com/photo-1574267432644-f74f8ec93e1a?w=400&h=600&fit=crop&q=80',
-      languages: 'ENGLISH | HINDI'
-    },
-    {
-      id: 3,
-      title: 'Penance',
-      image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=600&fit=crop&q=80'
-    },
-    {
-      id: 4,
-      title: 'Naruto',
-      image: 'https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?w=400&h=600&fit=crop&q=80',
-      badge: 'DEAL',
-      languages: 'JAPANESE | ENGLISH | TAMIL | TELUGU'
-    },
-    {
-      id: 5,
-      title: 'Attack on Titan',
-      image: 'https://images.unsplash.com/photo-1549834125-82d3c48159a3?w=400&h=600&fit=crop&q=80',
-      badge: 'DEAL',
-      languages: 'JAPANESE | ENGLISH | HINDI'
-    },
-    {
-      id: 6,
-      title: 'Breaking Bad',
-      image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop&q=80',
-      badge: 'NEW SEASON'
-    },
-    {
-      id: 7,
-      title: 'The Crown',
-      image: 'https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400&h=600&fit=crop&q=80',
-      languages: 'ENGLISH | HINDI'
-    },
-    {
-      id: 8,
-      title: 'One Piece',
-      image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&h=600&fit=crop&q=80',
-      badge: 'DEAL',
-      languages: 'JAPANESE | HINDI | TAMIL'
-    },
-    {
-      id: 9,
-      title: 'Stranger Things',
-      image: 'https://images.unsplash.com/photo-1606603696914-5d6c67b6c0e4?w=400&h=600&fit=crop&q=80',
-      badge: 'NEW EPISODE'
-    },
-    {
-      id: 10,
-      title: 'Money Heist',
-      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=600&fit=crop&q=80',
-      languages: 'SPANISH | ENGLISH | HINDI'
-    },
-    {
-      id: 11,
-      title: 'The Witcher',
-      image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=600&fit=crop&q=80',
-      badge: 'NEW SEASON'
-    },
-    {
-      id: 12,
-      title: 'Death Note',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=600&fit=crop&q=80',
-      badge: 'DEAL',
-      languages: 'JAPANESE | ENGLISH | HINDI'
-    },
-    {
-      id: 13,
-      title: 'Game of Thrones',
-      image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=600&fit=crop&q=80'
-    },
-    {
-      id: 14,
-      title: 'Peaky Blinders',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=600&fit=crop&q=80',
-      languages: 'ENGLISH | HINDI'
-    },
-    {
-      id: 15,
-      title: 'Squid Game',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&h=600&fit=crop&q=80',
-      badge: 'TRENDING',
-      languages: 'KOREAN | ENGLISH | HINDI'
-    }
-  ];
+  {
+    "id": 1,
+    "title": "Demon Slayer",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.xmCDu7ee_Zh8UOgwyiwr-AHaEK?pid=Api&P=0&h=180",
+    "badge": "DEAL",
+    "languages": "JAPANESE | HINDI | TAMIL | TELUGU"
+  },
+  {
+    "id": 2,
+    "title": "Demon",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.h3blHXnbRuZtW19Wn80_ZQHaFE?pid=Api&P=0&h=180",
+    "languages": "ENGLISH | HINDI"
+  },
+  {
+    "id": 3,
+    "title": "Penance",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.FzTmd6fs4FTQUMM0K0cAjAHaLY?pid=Api&P=0&h=180"
+  },
+  {
+    "id": 4,
+    "title": "Naruto",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.8vSeO4dRLy_XttUqprw5BwHaD4?pid=Api&P=0&h=180",
+    "badge": "DEAL",
+    "languages": "JAPANESE | ENGLISH | TAMIL | TELUGU"
+  },
+  {
+    "id": 5,
+    "title": "Attack on Titan",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.l8kdR8PHy_q2l2X5Ev4L7gHaEK?pid=Api&P=0&h=180",
+    "badge": "DEAL",
+    "languages": "JAPANESE | ENGLISH | HINDI"
+  },
+  {
+    "id": 6,
+    "title": "Breaking Bad",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.NIWpNyuoSEnZkGaG3KJHFQHaEK?pid=Api&P=0&h=180",
+    "badge": "NEW SEASON"
+  },
+  {
+    "id": 7,
+    "title": "The Crown",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.MwbCMbk5UXRPVgbb7VpBZgHaK-?pid=Api&P=0&h=180",
+    "languages": "ENGLISH | HINDI"
+  },
+  {
+    "id": 8,
+    "title": "One Piece",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.l_fNFXOK0EtlSqfnmk4f6wHaKk?pid=Api&P=0&h=180",
+    "badge": "DEAL",
+    "languages": "JAPANESE | HINDI | TAMIL"
+  },
+  {
+    "id": 9,
+    "title": "Stranger Things",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.LngZ6NEkjKixxwI0g61rMAHaEK?pid=Api&P=0&h=180",
+    "badge": "NEW EPISODE"
+  },
+  {
+    "id": 10,
+    "title": "Money Heist",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.hZWnF_2KHVPKVd0H8VNJDAHaDt?pid=Api&P=0&h=180",
+    "languages": "SPANISH | ENGLISH | HINDI"
+  }
+]
 
   private registerSwiperElements(): void {
     if (typeof window !== 'undefined') {

@@ -1,4 +1,5 @@
 export const environment = {
-      baseUrl: 'http://192/',
+      baseUrl: 'http://localhost:8000',
+
 
   };

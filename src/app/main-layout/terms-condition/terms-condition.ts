@@ -42,8 +42,8 @@ export class TermsCondition{
       altAddress: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       altDescription: 'All other customers in Australia',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Conditions of Use',
         'Privacy Notice',
         'Interest-Based Ads Policy',
@@ -60,8 +60,8 @@ export class TermsCondition{
       altAddress: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       altDescription: 'All other customers in Brazil',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Conditions of Use',
         'Privacy Notice',
         'Interest-Based Ads Policy',
@@ -75,8 +75,8 @@ export class TermsCondition{
       serviceProvider: 'Amazon.com.ca ULC',
       address: ['40 King Street West, 47th Floor', 'Toronto, ON M5H 3Y2'],
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Conditions of Use',
         'Privacy Notice',
         'Cookies Notice',
@@ -95,8 +95,8 @@ export class TermsCondition{
       altAddress: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A'],
       altDescription: 'All other customers in Egypt',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Conditions of Use',
         'Privacy Notice',
         'Interest-Based Ads',
@@ -111,9 +111,9 @@ export class TermsCondition{
       address: ['1 Principal Place, Worship Street', 'London, EC2A 2FA', 'Company registered number: 6528297'],
       additionalInfo: 'Direct or indirect owner and ultimate beneficial owner: Amazon.com Inc., 410 Terry Avenue North, Seattle, WA 98109, USA',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Terms of Use (for Poland)',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Terms of Use (for Poland)',
+        'Amazon Video Hub Usage Rules',
         'Conditions of Use & Sale',
         'Privacy Notice',
         'Cookies Notice',
@@ -131,8 +131,8 @@ export class TermsCondition{
       serviceProvider: 'Amazon.com Sales, Inc.',
       address: ['410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       terms: [
-        'Amazon Prime Video 利用規約',
-        'Amazon Prime Video 使用規則',
+        'Amazon Video Hub 利用規約',
+        'Amazon Video Hub 使用規則',
         '利用規約',
         'プライバシー規約',
         'パーソナライズド広告規約',
@@ -148,8 +148,8 @@ export class TermsCondition{
       serviceProvider: 'Amazon Seller Services Private Limited',
       address: ['Ground Floor', 'Eros Plaza, Eros Corporate Tower', 'Nehru Place', 'New Delhi 110019'],
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Conditions of Use & Sale',
         'Privacy Notice',
         'Interest-Based Ads',
@@ -167,8 +167,8 @@ export class TermsCondition{
       altAddress: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       altDescription: 'All other customers in the Kingdom of Saudi Arabia',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Conditions of Use',
         'Privacy Notice',
         'Interest-Based Ads',
@@ -185,8 +185,8 @@ export class TermsCondition{
       altAddress: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       altDescription: 'All other customers in Mexico',
       terms: [
-        'Condiciones de Uso de Amazon Prime Video',
-        'Reglas de Uso de Amazon Prime Video',
+        'Condiciones de Uso de Amazon Video Hub',
+        'Reglas de Uso de Amazon Video Hub',
         'Condiciones de Uso',
         'Aviso de privacidad de Amazon.com.mx',
         'Condiciones del Servicio Twitch Prime (if you use any Twitch Prime benefit)'
@@ -202,8 +202,8 @@ export class TermsCondition{
       altAddress: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       altDescription: 'All other customers in Singapore',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Condition of Use & Sale',
         'Privacy Notice',
         'Twitch Terms of Service (if you use any Twitch Prime benefit)'
@@ -219,8 +219,8 @@ export class TermsCondition{
       altAddress: ['Esentepe Mahallesi Bahar Sk. Özdilek', 'River Plaza', 'Wyndham Grand Hotel Apt. No: 13', '52 Şişli, Istanbul'],
       altDescription: 'All other customers in Turkey',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Condition of Use & Sale',
         'Privacy Notice',
         'Cookies Notice',
@@ -238,8 +238,8 @@ export class TermsCondition{
       altAddress: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       altDescription: 'All other customers in the United Arab Emirates',
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Condition of Use',
         'Privacy Notice',
         'Interest-Based Ads Policy',
@@ -253,8 +253,8 @@ export class TermsCondition{
       serviceProvider: 'Amazon Digital UK Ltd',
       address: ['1 Principal Place', 'Worship Street', 'London', 'EC2A 2FA', 'Company Registered Number: 6528297'],
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Condition of Use & Sale',
         'Privacy Notice',
         'Cookies Notice',
@@ -269,8 +269,8 @@ export class TermsCondition{
       serviceProvider: 'Amazon.com Services LLC',
       address: ['C/O Amazon.com', 'Attn: Legal Department', '410 Terry Avenue North', 'Seattle, WA 98109-5210, U.S.A.'],
       terms: [
-        'Amazon Prime Video Terms of Use',
-        'Amazon Prime Video Usage Rules',
+        'Amazon Video Hub Terms of Use',
+        'Amazon Video Hub Usage Rules',
         'Condition of Use',
         'Privacy Notice',
         'Interest-Based Ads Policy',
@@ -282,17 +282,17 @@ export class TermsCondition{
 
   sidebarLinks: SidebarLink[] = [
     { 
-      title: 'AMAZON PRIME VIDEO SERVICE PROVIDER INFORMATION AND APPLICABLE TERMS AND POLICIES',
+      title: 'AMAZON VIDEO HUB SERVICE PROVIDER INFORMATION AND APPLICABLE TERMS AND POLICIES',
       active: true,
       url: '#'
     },
-    { title: 'Amazon Prime Video Terms of Use - Global', url: '#' },
-    { title: 'Amazon Prime Video Usage Rules', url: '#' },
+    { title: 'Amazon Video Hub Terms of Use - Global', url: '#' },
+    { title: 'Amazon Video Hub Usage Rules', url: '#' },
     { title: 'VAT / GST Rates', url: '#' },
     { title: 'About Cookies', url: '#' },
     { title: 'Content Policy Guidelines', url: '#' },
     { title: 'About Personal Information Use Across Amazon Services', url: '#' },
-    { title: 'About Tax on Prime Video subscriptions sold on PrimeVideo.com', url: '#' },
+    { title: 'About Tax on Video Hub subscriptions sold on PrimeVideo.com', url: '#' },
     { title: 'Discounted Monthly Subscription with Commitment', url: '#' }
   ];
 

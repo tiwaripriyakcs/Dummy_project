@@ -1,0 +1,109 @@
+
+<div  class="w-full bg-gray-300 py-2">
+    <h1 class="text-3xl font-bold py-2 ps-6">Help</h1>
+
+</div>
+<div class="w-full bg-gray-50 min-h-screen p-6">
+
+
+    <!-- Header -->
+    <h1 class="text-3xl font-bold mb-6">Video Hub Support</h1>
+
+    <!-- Search -->
+    <div class="mb-8">
+        <input type="text" placeholder="Search Help"
+            class="w-full  p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-50" />
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+        <!-- Left Sidebar -->
+        <div class="col-span-1 bg-white rounded-xl shadow p-4">
+            <h2 class="text-lg font-bold mb-4">Settings</h2>
+
+            <ul class="space-y-3">
+                <li class="flex gap-2 items-center cursor-pointer hover:text-blue-600">
+                    <span>⚙️</span> Account Details
+                </li>
+                <li class="flex gap-2 items-center cursor-pointer hover:text-blue-600">
+                    <span>📱</span> Register a Device
+                </li>
+                <li class="flex gap-2 items-center cursor-pointer hover:text-blue-600">
+                    <span>🔒</span> Parental Controls
+                </li>
+                <li class="flex gap-2 items-center cursor-pointer hover:text-blue-600">
+                    <span>🕒</span> Watch History
+                </li>
+                <li class="flex gap-2 items-center cursor-pointer hover:text-blue-600">
+                    <span>👤</span> Video Hub Profiles
+                </li>
+            </ul>
+        </div>
+
+        <!-- Center Card -->
+        <div class="col-span-2 bg-white shadow rounded-xl p-6">
+            <div class="flex items-center justify-center py-10">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" class="h-32" />
+            </div>
+
+            <h3 class="text-xl font-semibold mb-2">
+                Need to Cancel a Video Hub Add-On Subscription?
+            </h3>
+            <p class="text-gray-600 mb-10">
+                Find out how to easily cancel a Video Hub Add-On Subscription online.
+            </p>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="col-span-1 bg-white p-4 rounded-xl shadow">
+            <h2 class="font-bold text-lg mb-4">Popular Articles</h2>
+
+            <ul class="space-y-3">
+                <li class="text-blue-600 hover:underline cursor-pointer">Cancel an Accidental Purchase</li>
+                <li class="text-blue-600 hover:underline cursor-pointer">Rent and Buy Video Hub Titles</li>
+                <li class="text-blue-600 hover:underline cursor-pointer">Install Video Hub on Devices</li>
+                <li class="text-blue-600 hover:underline cursor-pointer">Which Content Includes Ads?</li>
+                <li class="text-blue-600 hover:underline cursor-pointer">Issues While Playing Videos</li>
+                <li class="text-blue-600 hover:underline cursor-pointer">How Do I Cast Video Hub to My TV?</li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- ACCORDION SECTION (Moved below the main grid and adjusted padding) -->
+    <div class="mt-4 shadow-2xl rounded-xl overflow-hidden border border-gray-300">
+        <h2 class="text-2xl font-bold p-5 bg-white border-b border-gray-300 text-gray-800">Frequently Asked Questions
+        </h2>
+
+        <!-- Loop through the accordion data -->
+        <div *ngFor="let panel of accordionData; let i = index" class="border-b last:border-b-0 border-gray-300">
+
+            <!-- Accordion Header/Title -->
+            <button (click)="togglePanel(i)"
+                class="flex justify-between items-center w-full p-5 text-left font-semibold text-base transition duration-300 focus:outline-none"
+                [ngClass]="{
+                        'bg-white text-gray-800 hover:bg-gray-50 ': activeIndex() === i, 
+                        'bg-white text-gray-800 hover:bg-gray-50': activeIndex() !== i
+                    }">
+                <span>{{ panel.title }}</span>
+                <!-- Chevron Icon -->
+                <svg class="w-5 h-5 transition-transform duration-300"
+                    [ngClass]="{'rotate-180': activeIndex() === i, 'rotate-0': activeIndex() !== i}"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75.0 111.06 1.06l-4.25 4.25a.75.75.0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+
+            <!-- Accordion Content -->
+            <div *ngIf="activeIndex() === i"
+                class="p-5 bg-gray-50 text-gray-600 transition-all duration-300 ease-in-out border-t border-gray-200">
+                <p>{{ panel.content }}</p>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

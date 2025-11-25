@@ -38,8 +38,10 @@ export class Card {
   @Input() slideWidth: number = 280;
   @Input() autoplayDelay: number = 5000;
   @Input() gridClasses: string = 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6';
-
+token:any;
   ngOnInit(): void {
+    const token = JSON.parse(localStorage.getItem('user') || '{}');
+    this.token = token?._id || null;
     this.registerSwiperElements();
   }
 
@@ -50,8 +52,13 @@ export class Card {
       });
     }
   }
-  navigateToDetail(itemId: number): void {
+
+   navigateToDetail(itemId: number): void {
+  if (this.token) {
     this.router.navigate(['/detail', itemId]);
+  } else {
+    this.router.navigate(['/login']);
   }
+}
 
 }

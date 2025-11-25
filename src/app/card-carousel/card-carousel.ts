@@ -31,6 +31,7 @@ export type CarouselType = 'hero' | 'recommended' | 'subscription' | 'top10' | '
 })
 
 export class CardCarousel {
+  public dummyImage = "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=300&h=400&fit=crop&q=80";
   private router = inject(Router);
   @Input() items: CarouselItem[] = [];
   @Input() type: CarouselType = 'recommended';
@@ -41,8 +42,10 @@ export class CardCarousel {
   @Input() slideWidth: number = 280;
   @Input() autoplayDelay: number = 5000;
   @Input() gridClasses: string = 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6';
-
+  token: any
   ngOnInit(): void {
+    const token = JSON.parse(localStorage.getItem('user') || '{}');
+    this.token = token?._id || null;
     this.registerSwiperElements();
   }
 
@@ -53,8 +56,13 @@ export class CardCarousel {
       });
     }
   }
+
   navigateToDetail(itemId: number): void {
-    this.router.navigate(['/detail', itemId]);
+    if (this.token) {
+      this.router.navigate(['/detail', itemId]);
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 
 }
