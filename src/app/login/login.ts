@@ -2,6 +2,7 @@ import { Component, signal, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ApiService } from '../service/api-service';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +12,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.scss']
 })
 export class LoginComponent {
-
   private fb = inject(FormBuilder);
   private router = inject(Router);
-
+ 
   /** VIEW HANDLING */
   currentView: 'login' | 'create' | 'forgot' = 'login';
 
@@ -26,7 +26,7 @@ export class LoginComponent {
   createForm!: FormGroup;
   forgotForm!: FormGroup;
 
-  constructor() {
+ constructor(private apiService: ApiService)  {
     this.initializeForms();
   }
 
@@ -37,7 +37,7 @@ export class LoginComponent {
     });
 
     this.createForm = this.fb.group({
-      name: ['', Validators.required],
+      username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
@@ -66,26 +66,44 @@ export class LoginComponent {
   }
 
   /** Handle Login submit */
-  handleContinue() {
-    if (this.loginForm.invalid) {
-      this.loginForm.markAllAsTouched();
-      return;
-    }
+handleContinue() {
+  if (this.loginForm.invalid) return;
 
-    console.log('Proceed with:', this.loginForm.value.email);
-    this.router.navigate(['/']);
-  }
+  this.apiService.loginUser(this.loginForm.value).subscribe({
+    next: (res: any) => {
+
+      // STORE TOKENS + USER
+      localStorage.setItem('accessToken', res.data.accessToken);
+      localStorage.setItem('refreshToken', res.data.refreshToken);
+      localStorage.setItem('user', JSON.stringify(res.data.user));
+
+      alert(res.message || 'Login Successful');
+
+      this.router.navigate(['/']);
+    },
+
+    error: (err: any) => {
+      console.error('Error:', err.error);
+      alert('User does not exist');
+    }
+  });
+}
+
 
   /** Handle Create Account submit */
-  submitCreateAccount() {
-    if (this.createForm.invalid) {
-      this.createForm.markAllAsTouched();
-      return;
-    }
+  submitCreateAccount() {    
+     if (this.createForm.invalid) return;
+    this.apiService.registerUser(this.createForm.value).subscribe({
+      next: (res:any) => {
+        alert(res.message);
+        this.switchView('login');
+      },
+      error: (err:any) => {
+        console.error('Error:', err.error);
+        alert('Something went wrong');
+      }
+    });
 
-    console.log('Create Account:', this.createForm.value);
-    alert('Account Created Successfully!');
-    this.switchView('login');
   }
 
   /** Handle Forgot Password */

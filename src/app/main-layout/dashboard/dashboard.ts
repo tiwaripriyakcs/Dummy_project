@@ -21,8 +21,8 @@ interface Subscription {
 })
 export class Dashboard {
   private router = inject(Router);
-
- readonly festiveReleases = [
+  token: any;
+  readonly festiveReleases = [
     {
       id: 1,
       title: 'Godzilla',
@@ -66,7 +66,7 @@ export class Dashboard {
     {
       id: 2,
       title: 'Mission Impossible',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.xYkT6R5sVR-RhBjmeCym1QHaEK?pid=Api&P=0&h=180',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.xYkT6R5sVR-RhBjmeCym1QHaEK?pid=Api&P=0&h=180',
       transform: 'rotate-[-4deg] translate-x-[5%] translate-y-[-2%]'
     },
     {
@@ -78,7 +78,7 @@ export class Dashboard {
     {
       id: 4,
       title: 'Spider-Man',
-     image: 'https://tse4.mm.bing.net/th/id/OIP.xYkT6R5sVR-RhBjmeCym1QHaEK?pid=Api&P=0&h=180',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.xYkT6R5sVR-RhBjmeCym1QHaEK?pid=Api&P=0&h=180',
       transform: 'rotate-[4deg] translate-x-[-5%] translate-y-[2%]'
     },
     {
@@ -152,8 +152,18 @@ export class Dashboard {
       bgColor: 'bg-gradient-to-br from-cyan-700 to-cyan-900'
     }
   ];
+  ngOnInit() {
+    const token = JSON.parse(localStorage.getItem('user') || '{}');
+    this.token = token?._id || null;
 
-   navigateToDetail(itemId: string): void {
-    this.router.navigate(['/detail', itemId]);
   }
+
+  navigateToDetail(itemId: string): void {
+    if (this.token) {
+      this.router.navigate(['/detail', itemId]);
+    } else {
+      this.router.navigate(['/login']);
+    }
+  }
+
 }
