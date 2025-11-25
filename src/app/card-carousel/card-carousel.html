@@ -1,7 +1,7 @@
-<div class="w-full" [ngClass]="{'bg-[#0f171e]': type !== 'hero', 'py-12': type !== 'hero'}">
+<div class="w-full" [ngClass]="{'bg-[#0f171e]': type !== 'hero', 'py-6': type !== 'hero'}">
   <!-- Section Title -->
   <div *ngIf="sectionTitle && type !== 'hero'" class="px-16 mb-6 flex items-center gap-3">
-    <h2 class="text-white xl:text-3xl lg:text-xl text-lg font-bold">{{ sectionTitle }}</h2>
+    <h2 class="text-white xl:text-xl lg:text-lg text-md font-bold">{{ sectionTitle }}</h2>
     <div *ngIf="showArrowIcon"
       class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors">
       <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@
           <div class="relative overflow-hidden rounded-lg cursor-pointer group/card"
             (click)="navigateToDetail(item.id)">
             <img [src]="item.image?item.image:item.image?item.image:dummyImage" [alt]="item.title"
-              class="md:w-full w-[240%] h-[420px] object-cover transition-transform duration-300 group-hover/card:scale-110">
+              class="md:w-full w-[240%] h-[320px] object-cover transition-transform duration-300 group-hover/card:scale-110">
 
             <div *ngIf="item.badge"
               class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded z-10">
@@ -128,7 +128,7 @@
           <div
             class="relative bg-[#1a1d29] rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl group"
             (click)="navigateToDetail(item.id)">
-            <img [src]="item.image?item.image:item.image?item.image:dummyImage" [alt]="item.title" class="w-full h-[280px] object-cover">
+            <img [src]="item.image?item.image:item.image?item.image:dummyImage" [alt]="item.title" class="w-full h-[180px] object-cover">
 
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">
@@ -229,7 +229,7 @@
         <div
           class="relative overflow-hidden rounded-lg cursor-pointer group transition-transform duration-300 hover:scale-105"
           (click)="navigateToDetail(item.id)">
-          <img [src]="item.image?item.image:item.image?item.image:dummyImage" [alt]="item.title" class="w-full h-[300px] object-cover">
+          <img [src]="item.image?item.image:item.image?item.image:dummyImage" [alt]="item.title" class="w-full h-[200px] object-cover">
 
           <div *ngIf="item.badge"
             class="absolute top-3 right-3 bg-white text-black px-3 py-1 text-xs font-bold rounded">

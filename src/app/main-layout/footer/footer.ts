@@ -11,7 +11,7 @@ export class Footer {
 currentYear = new Date().getFullYear();
   footerLinks = [
     { text: 'Terms and Privacy Notice', url: 'help' },
-    { text: 'Send us feedback', url: 'login' },
+    { text: 'Send us feedback', url: '#' },
     { text: 'Help', url: 'help' }
   ];
 }
