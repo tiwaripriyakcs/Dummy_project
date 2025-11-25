@@ -1,0 +1,14 @@
+<div 
+  class="card"
+  [ngStyle]="{'background-image': 'url(' + cardData.imageUrl + ')'}"
+  title="{{ cardData.title }}"
+>
+  <div class="live-label" *ngIf="cardData.liveLabel">{{ cardData.liveLabel }}</div>
+
+  <div class="content-area">
+    <p class="title">{{ cardData.title }}</p>
+    <p class="subtitle">{{ cardData.subtitle }}</p>
+    
+    <p class="time" *ngIf="cardData.time">{{ cardData.time }}</p>
+  </div>
+</div>

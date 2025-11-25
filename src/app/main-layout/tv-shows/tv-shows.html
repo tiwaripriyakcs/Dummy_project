@@ -9,7 +9,7 @@
     <app-card-carousel
       [items]="recommendedItems"
       type="recommended"
-      sectionTitle="Recommended with subscriptions"
+      sectionTitle="Top-rated TV shows on IMDb"
       [slideWidth]="280"
       [spaceBetween]="16"
     ></app-card-carousel>
@@ -18,14 +18,14 @@
     <app-card-carousel
       [items]="subscriptionItems"
       type="subscription"
-      sectionTitle="Subscriptions you might like"
+      sectionTitle="Filmfare OTT Award Winners"
     ></app-card-carousel>
 
     <!-- Top 10 with subscriptions -->
     <app-card-carousel
       [items]="top10Items"
       type="top10"
-      sectionTitle="Top 10 with subscriptions"
+      sectionTitle="Comedy TV"
       [showArrowIcon]="true"
       [slideWidth]="340"
       [spaceBetween]="16"
@@ -35,7 +35,7 @@
     <app-card-carousel
       [items]="gridItems"
       type="grid"
-      sectionTitle="Continue Watching"
+      sectionTitle="Top 10 TV shows in India"
       gridClasses="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
     ></app-card-carousel>
  </div>
